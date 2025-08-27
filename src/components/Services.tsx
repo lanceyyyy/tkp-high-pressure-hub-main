@@ -170,7 +170,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-3xl font-bold mb-12">Why Choose TKP Ultrahøytrykk</h3>
+          <h3 className="text-3xl font-bold mb-12">Why Choose TKP Ultrahøytrykk AS</h3>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
