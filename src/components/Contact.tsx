@@ -95,7 +95,7 @@ const Contact = () => {
             viewport={{ once: true }}
           className="max-w-xl w-full mx-auto"
           >
-            <Card className="card-industrial w-full">
+            <Card className="card-industrial w-full mb-6">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center">
                   <Send className="h-6 w-6 text-primary mr-3" />
@@ -196,6 +196,16 @@ const Contact = () => {
                 </form>
               </CardContent>
             </Card>
+            <Card className="card-industrial gradient-marine text-white ">
+              <CardContent className="p-6">
+                <CheckCircle className="h-8 w-8 text-white mb-4" />
+                <h3 className="text-xl font-bold mb-2">Service Coverage</h3>
+                <p className="text-white/90">
+                  Based in Ålesund, we provide ultra-high pressure water blasting services 
+                  throughout Norway. No project is too big or too small.
+                </p>
+              </CardContent>
+            </Card>
           </motion.div>
 
           {/* Contact Information */}
@@ -204,7 +214,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6 max-w-xl w-full mx-auto"
+            className="space-y-2 max-w-xl w-full mx-auto"
           >
             {/* Quick Contact */}
             <Card className="card-industrial">
@@ -270,6 +280,40 @@ const Contact = () => {
                     Org. nr: 876 463 172
                   </div>
                 </div>
+                
+                {/* Google Maps */}
+                <div className="mt-6">
+                  <div className="w-full h-64 rounded-lg overflow-hidden border border-border shadow-lg">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1458.1234567890123!2d6.1543!3d62.4722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4616d8b8b8b8b8b8%3A0xb8b8b8b8b8b8b8b8!2sLerstadvika+28,+6014+%C3%85LESUND,+Norway!5e0!3m2!1sen!2sno!4v1234567890123"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="TKP Ultrahøytrykk AS Location"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="mt-3 text-center">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      asChild
+                      className="text-sm"
+                    >
+                      <a 
+                        href="https://maps.google.com/?q=Lerstadvika+28,+6014+ÅLESUND,+Norway" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <MapPin className="h-4 w-4 mr-2" />
+                        Open in Google Maps
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -295,16 +339,7 @@ const Contact = () => {
             </Card>
 
             {/* Service Area */}
-            <Card className="card-industrial gradient-marine text-white">
-              <CardContent className="p-6">
-                <CheckCircle className="h-8 w-8 text-white mb-4" />
-                <h3 className="text-xl font-bold mb-2">Service Coverage</h3>
-                <p className="text-white/90">
-                  Based in Ålesund, we provide ultra-high pressure water blasting services 
-                  throughout Norway. No project is too big or too small.
-                </p>
-              </CardContent>
-            </Card>
+            
           </motion.div>
         </div>
       </div>
